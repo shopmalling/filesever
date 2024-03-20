@@ -1,0 +1,9 @@
+# docker-compose.yaml
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./uploads:/uploads
