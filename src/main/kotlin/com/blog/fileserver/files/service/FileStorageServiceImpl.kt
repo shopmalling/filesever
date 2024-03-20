@@ -20,6 +20,7 @@ class FileStorageServiceImpl : FileStorageService{
             Files.list(directory).forEach { Files.delete(it) }
         }
 
+
         // 파일 저장
         mainPhoto.inputStream.use { inputStream ->
             Files.copy(inputStream, filePath, StandardCopyOption.REPLACE_EXISTING)
